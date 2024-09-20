@@ -240,7 +240,7 @@
             }
             .grid-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+            grid-template-columns: repeat(3, 1fr); /* 4 columnas */
             grid-gap: 10px;
             max-width: 1600px;
             margin: 0 auto;
@@ -249,7 +249,7 @@
             .card {
             background-color: #ffcc33; /*ffcc33*/
             border: 2px solid #dadada; /* 331b00 Dorado */
-            border-radius: 15px;
+            border-radius: 12px;
             padding: 20px;
             text-align: center;
             transition: transform 0.3s ease;
@@ -262,33 +262,35 @@
             transform: scale(1.05);
             }
 
-            .card img {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 20px;
-            }
-
             .card h3 {
             margin: 10px 0;
             font-size: 1.5em;
             color: #ffcc33; /* Color del título en dorado */
             }
-
-            .card p {
-            color: #fff;
-            }
-
-            /* Para el pie de página */
-            footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #ffcc33;
-            }
-
             .item-icon {
             font-size: 6rem; /* Ajusta el tamaño del icono aquí */
             text-align: center; /* Asegura que el icono esté centrado en el contenedor */
             }
+
+            /* Para tablets o pantallas medianas */
+            @media (max-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+            }
+            }
+
+            /* Para pantallas de móviles */
+            @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Cambia a 1 columna para móviles */
+            }
+
+            .card {
+                padding: 20px; /* Aumenta el padding para mejorar la visualización */
+                font-size: 1.1em; /* Aumenta ligeramente el texto para mejor lectura */
+            }
+            }
+
         </style>
         <style id='wp-emoji-styles-inline-css'>
             img.wp-smiley, img.emoji {
@@ -1734,7 +1736,7 @@
                                                                     display: inline-block
                                                                 }
                                                             </style>
-                                                            <img width="932" height="259" src="wp-content/uploads/2023/04/CONSTMANSA-PNG.png" class="attachment-2048x2048 size-2048x2048 wp-image-96" alt="" srcset="wp-content/uploads/2023/04/CONSTMANSA-PNG.png 932w, wp-content/uploads/2023/04/ECO-PNG-300x83.png 300w, wp-content/uploads/2023/04/ECO-PNG-768x213.png 768w" sizes="(max-width: 932px) 100vw, 932px"/>
+                                                            <img width="932" height="259" src="wp-content/uploads/2023/04/CONSTMANSA-PNG.png" class="attachment-2048x2048 size-2048x2048 wp-image-96" alt="" srcset="wp-content/uploads/2023/04/CONSTMANSA-PNG.png 932w, wp-content/uploads/2023/04/CONSTMANSA-PNG.png 300w, wp-content/uploads/2023/04/CONSTMANSA-PNG-768x213.png 768w" sizes="(max-width: 932px) 100vw, 932px"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1793,7 +1795,7 @@
                                                                     <div class="elementskit-nav-identity-panel">
                                                                         <div class="elementskit-site-title">
                                                                             <a class="elementskit-nav-logo" href="https://ecoinm.com" target="_self" rel="">
-                                                                                <img width="932" height="259" src="wp-content/uploads/2023/04/CONSTMANSA-PNG.png" class="attachment-full size-full" alt="" decoding="async" srcset="wp-content/uploads/2023/04/CONSTMANSA-PNG.png 932w, wp-content/uploads/2023/04/ECO-PNG-300x83.png 300w, wp-content/uploads/2023/04/ECO-PNG-768x213.png 768w" sizes="(max-width: 932px) 100vw, 932px"/>
+                                                                                <img width="932" height="259" src="wp-content/uploads/2023/04/CONSTMANSA-PNG.png" class="attachment-full size-full" alt="" decoding="async" srcset="wp-content/uploads/2023/04/CONSTMANSA-PNG.png 932w, wp-content/uploads/2023/04/CONSTMANSA-PNG.png 300w, wp-content/uploads/2023/04/CONSTMANSA-PNG-768x213.png 768w" sizes="(max-width: 932px) 100vw, 932px"/>
                                                                             </a>
                                                                         </div>
                                                                         <button class="elementskit-menu-close elementskit-menu-toggler" type="button">X</button>
@@ -1939,11 +1941,11 @@
                                                                                                                 <div class="elementor-widget-container">
                                                                                                                     <ul class="elementor-icon-list-items elementor-inline-items">
                                                                                                                         <li class="elementor-icon-list-item elementor-inline-item">
-                                                                                                                            <a href="mailto:gerencia@ecoinm.com" target="_blank">
+                                                                                                                            <a href="mailto:constmansa@outlook.com" target="_blank">
                                                                                                                                 <span class="elementor-icon-list-icon">
                                                                                                                                     <i aria-hidden="true" class="far fa-envelope"></i>
                                                                                                                                 </span>
-                                                                                                                                <span class="elementor-icon-list-text">gerencia@ecoinm.com</span>
+                                                                                                                                <span class="elementor-icon-list-text">constmansa@outlook.com</span>
                                                                                                                             </a>
                                                                                                                         </li>
                                                                                                                     </ul>
@@ -2035,7 +2037,7 @@
                                                                                                             </div>
                                                                                                             <div class="elementor-element elementor-element-e39dbd0 elementor-widget elementor-widget-image" data-id="e39dbd0" data-element_type="widget" data-widget_type="image.default">
                                                                                                                 <div class="elementor-widget-container">
-                                                                                                                    <img width="800" height="222" src="wp-content/uploads/2023/04/CONSTMANSA-PNG.png" class="attachment-large size-large wp-image-96" alt="" srcset="wp-content/uploads/2023/04/CONSTMANSA-PNG.png 932w, wp-content/uploads/2023/04/ECO-PNG-300x83.png 300w, wp-content/uploads/2023/04/ECO-PNG-768x213.png 768w" sizes="(max-width: 800px) 100vw, 800px"/>
+                                                                                                                    <img width="800" height="222" src="wp-content/uploads/2023/04/CONSTMANSA-PNG.png" class="attachment-large size-large wp-image-96" alt="" srcset="wp-content/uploads/2023/04/CONSTMANSA-PNG.png 932w, wp-content/uploads/2023/04/CONSTMANSA-PNG.png 300w, wp-content/uploads/2023/04/CONSTMANSA-PNG.png 768w" sizes="(max-width: 800px) 100vw, 800px"/>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -2090,7 +2092,7 @@
                                 <div class="item-icon">
                                     <i class="fas fa-hard-hat"></i>
                                 </div>
-                              <h3>Diseñamos, Construimos y Gestionamos tu Proyecto</h3>
+                              <h5>Diseñamos, Construimos y Gestionamos tu Proyecto</h5>
                             </a>
                             <a href="supervisionObras.html" class="card">
                                 <div class="item-icon">
@@ -2102,58 +2104,58 @@
                                 <div class="item-icon">
                                     <i class="fas fa-home"></i>
                                 </div>
-                              <h3>Remodelación y Ampliación</h3>
+                              <h5>Remodelación y Ampliación</h3>
                             </a>
                         
                             <a href="estructurasMetalicas.html" class="card">
                                 <div class="item-icon">
                                     <i class="fas fa-building"></i>
                                 </div>
-                              <h3>Trabajo con Estructuras Metálicas</h3>
+                              <h5>Trabajo con Estructuras Metálicas</h5>
                             </a>
                             <a href="serviciosEspecializados.html" class="card">
                                 <div class="item-icon">
                                     <i class="fas fa-wrench"></i>
                                 </div>
-                              <h3>Mantenimiento y Servicios Especializados</h3>
+                              <h5>Mantenimiento y Servicios Especializados</h5>
                             </a>
                             <a href="serviciosDrywall.html" class="card">
                                 <div class="item-icon">
                                     <i class="fas fa-paint-roller"></i>
                                 </div>
-                              <h3>Servicios de Drywall</h3>
+                              <h5>Servicios de Drywall</h5>
                             </a>
                             <a href="proyectosElectricos.html" class="card">
                                 <div class="item-icon">
                                     <i class="fas fa-bolt"></i>
                                 </div>
-                              <h3>Proyectos Eléctricos</h3>
+                              <h5>Proyectos Eléctricos</h5>
                             </a>
                         
                             <a href="suministroMateriales.html" class="card">
                                 <div class="item-icon">
                                     <i class="fas fa-cogs"></i>
                                 </div>
-                              <h3>Suministro y Colocación de Materiales</h3>
+                              <h5>Suministro y Colocación de Materiales</h5>
                             </a>
                         
                             <a href="diseñoInteriores.html" class="card">
                                 <div class="item-icon">
                                     <i class="fas fa-palette"></i>
                                 </div>
-                                <h3>Diseño de Interiores</h3>
+                                <h5>Diseño de Interiores</h5>
                             </a>
                             <a href="estudiosTopograficos.html" class="card">
                                 <div class="item-icon">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
-                                 <h3>Estudios Topográficos</h3>
+                                 <h5>Estudios Topográficos</h5>
                             </a>
                             <a href="seguridadSalud.html" class="card">
                                 <div class="item-icon">
                                     <i class="fas fa-shield-alt"></i>
                                 </div>
-                                <h3>Gestión de Seguridad y Salud en el Trabajo</h3>
+                                <h5>Gestión de Seguridad y Salud en el Trabajo</h5>
                             </a>
                           </div>
                           <!-- #agregado -->
@@ -2173,7 +2175,7 @@
                                                     <div class="elementor-widget-wrap elementor-element-populated">
                                                         <div class="elementor-element elementor-element-594d2ad9 elementor-widget elementor-widget-image" data-id="594d2ad9" data-element_type="widget" data-widget_type="image.default">
                                                             <div class="elementor-widget-container">
-                                                                <img width="800" height="222" src="wp-content/uploads/2023/04/CONSTMANSA-PNG.png" class="attachment-large size-large wp-image-96" alt="" loading="lazy" srcset="wp-content/uploads/2023/04/CONSTMANSA-PNG.png 932w, wp-content/uploads/2023/04/ECO-PNG-300x83.png 300w, wp-content/uploads/2023/04/ECO-PNG-768x213.png 768w" sizes="(max-width: 800px) 100vw, 800px"/>
+                                                                <img width="800" height="222" src="wp-content/uploads/2023/04/CONSTMANSA-PNG.png" class="attachment-large size-large wp-image-96" alt="" loading="lazy" srcset="wp-content/uploads/2023/04/CONSTMANSA-PNG.png 932w, wp-content/uploads/2023/04/CONSTMANSA-PNG.png 300w, wp-content/uploads/2023/04/CONSTMANSA-PNG-768x213.png 768w" sizes="(max-width: 800px) 100vw, 800px"/>
                                                             </div>
                                                         </div>
                                                         <div class="elementor-element elementor-element-9f48711 elementor-widget elementor-widget-text-editor" data-id="9f48711" data-element_type="widget" data-widget_type="text-editor.default">

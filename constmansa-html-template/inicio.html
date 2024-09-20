@@ -242,92 +242,85 @@
             }
           
             .item-icon {
-            font-size: 10rem; /* Ajusta el tamaño del icono aquí */
-            text-align: center; /* Asegura que el icono esté centrado en el contenedor */
-            }
+                font-size: 8rem; /* Ajusta el tamaño del icono aquí */
+                text-align: center; /* Asegura que el icono esté centrado en el contenedor */
+                }
             * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                }
+
+          
+            .carousel-container {
+                position: relative;
+                max-width: 1600px;
+                overflow: hidden;
+                border-radius: 3rem;
+                background-color: #ffffff;
+                padding: 20px;
             }
 
-        /* Estilo específico para el carrusel 
-        .carousel-wrapper {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        */
-        .carousel-container {
-            position: relative;
-            width: 1600%;
-            max-width: 1600px;
-            overflow: hidden;
-            border-radius: 15px;
-            background-color: #ffffff;
-            padding: 20px;
-        }
+            .carousel-track {
+                display: flex;
+                gap: 0.3rem;
+                transition: transform 0.5s ease-in-out;
+            }
 
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
+            .carousel-slide {
+                min-width: 33.3%; /* Ajuste para pantallas grandes */
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #F3F3F3;
+                border-radius: 20px;
+                color: #333;
+                height: 250px;
+            }
 
-        .carousel-slide {
-            min-width: 25%; /* 25% para mostrar 4 slides */
-            padding: 15px; /* Espaciado interno */
-            margin-right: 6px; /* Separación entre cartillas */
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #F3F3F3;
-            border-radius: 10px;
-            color: #fff;
-            height: 300px; /* Altura de las tarjetas */
-        }
+            .carousel-slide .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
 
-        .carousel-slide img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
+            .carousel-btn {
+                position: absolute;
+                top: 40%;
+                transform: translateY(-50%);
+                background-color: rgba(255, 255, 255, 0.7);
+                border: none;
+                cursor: pointer;
+                padding: 5px;
+                font-size: 2rem;
+                color: #333;
+                z-index: 1;
+            }
 
-        /* Estilo específico para centrar el contenido */
-        .carousel-slide .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
+            .left {
+                left: 10px;
+            }
 
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.7);
-            border: none;
-            cursor: pointer;
-            padding: 5px;
-            font-size: 2rem;
-            color: #333;
-            z-index: 1;
-        }
+            .right {
+                right: 10px;
+            }
 
-        .left {
-            left: 10px;
-        }
+            /* Media Query para pantallas móviles */
+            @media screen and (max-width: 768px) {
+            .carousel-slide {
+                min-width: 100%; /* Mostrar 1 slide en móviles */
+                    }
+                }
 
-        .right {
-            right: 10px;
-        }
-
+            @media screen and (min-width: 769px) and (max-width: 1024px) {
+                .carousel-slide {
+                    min-width: 50%; /* Mostrar 2 slides en tablets */
+                }
+            }
         </style>
         <style id='wp-emoji-styles-inline-css'>
             img.wp-smiley, img.emoji {
@@ -1773,7 +1766,9 @@
                                                                     display: inline-block
                                                                 }
                                                             </style>
-                                                            <img width="932" height="259" src="wp-content/uploads/2023/04/CONSTMANSA-PNG.png" class="attachment-2048x2048 size-2048x2048 wp-image-96" alt="" srcset="wp-content/uploads/2023/04/CONSTMANSA-PNG.png 932w, wp-content/uploads/2023/04/CONSTMANSApng 300w, wp-content/uploads/2023/04/CONSTMANSA-PNG-768x213.png 768w" sizes="(max-width: 932px) 100vw, 932px"/>
+                                                            <a href="inicio.html" class="ekit-menu-nav-link active">
+                                                                <img width="932" height="259" src="wp-content/uploads/2023/04/CONSTMANSA-PNG.png" class="attachment-2048x2048 size-2048x2048 wp-image-96" alt="" srcset="wp-content/uploads/2023/04/CONSTMANSA-PNG.png 932w, wp-content/uploads/2023/04/CONSTMANSApng 300w, wp-content/uploads/2023/04/CONSTMANSA-PNG-768x213.png 768w" sizes="(max-width: 932px) 100vw, 932px"/>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1978,11 +1973,11 @@
                                                                                                                 <div class="elementor-widget-container">
                                                                                                                     <ul class="elementor-icon-list-items elementor-inline-items">
                                                                                                                         <li class="elementor-icon-list-item elementor-inline-item">
-                                                                                                                            <a href="mailto:gerencia@ecoinm.com" target="_blank">
+                                                                                                                            <a href="mailto:constmansa@outlook.com" target="_blank">
                                                                                                                                 <span class="elementor-icon-list-icon">
                                                                                                                                     <i aria-hidden="true" class="far fa-envelope"></i>
                                                                                                                                 </span>
-                                                                                                                                <span class="elementor-icon-list-text">gerencia@ecoinm.com</span>
+                                                                                                                                <span class="elementor-icon-list-text">constmansa@outlook.com</span>
                                                                                                                             </a>
                                                                                                                         </li>
                                                                                                                     </ul>
@@ -2111,7 +2106,7 @@
                             <div class="elementor-widget-wrap elementor-element-populated">
                                 <div class="elementor-element elementor-element-4f7cf370 elementor-widget elementor-widget-heading" data-id="4f7cf370" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h5 class="elementor-heading-title elementor-size-default">Bienvenidos a Constmansa srl</h5>
+                                        <h5 class="elementor-heading-title elementor-size-default">Bienvenidos a Constmansa S.A.C.</h5>
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-17531773 elementor-widget elementor-widget-heading" data-id="17531773" data-element_type="widget" data-widget_type="heading.default">
@@ -2120,7 +2115,7 @@
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-63f92eb4 elementor-widget elementor-widget-text-editor" data-id="63f92eb4" data-element_type="widget" data-widget_type="text-editor.default">
-                                    <div class="elementor-widget-container">Brindamos servicios de: alquileres, venta, compra de casas y terrenos; créditos hipotecarios, asesoramiento inmobiliario en el procedimiento de crédito financiero para la compra de un bien o para la construcción de edificios multifamiliares.						</div>
+                                    <div class="elementor-widget-container">Brindamos servicios de diseño, construcción y gestión de proyectos, incluyendo planos, permisos y presupuestos. Nos especializamos en la construcción de edificios, remodelaciones, estructuras metálicas, drywall, proyectos eléctricos y diseño de interiores. También ofrecemos supervisión de obras, estudios topográficos y gestión de seguridad y salud en el trabajo.</div>
                                 </div>
                                 <div class="elementor-element elementor-element-12d420c6 elementor-align-center elementor-widget elementor-widget-button" data-id="12d420c6" data-element_type="widget" data-widget_type="button.default">
                                     <div class="elementor-widget-container">
@@ -3496,18 +3491,47 @@
             const slides = Array.from(track.children);
             const nextButton = document.querySelector('.right');
             const prevButton = document.querySelector('.left');
-            let currentSlideIndex = 0;
-            const slidesToShow = 4; // Mostrar 4 slides a la vez
-            const slideWidth = track.clientWidth / slidesToShow; // Calculamos el ancho de cada slide
 
-            // Ajustar el tamaño de cada slide dinámicamente
-            slides.forEach(slide => {
-                slide.style.width = `${slideWidth}px`;
-            });
+            let currentSlideIndex = 0;
+
+            function updateSlidesToShow() {
+                if (window.innerWidth <= 768) {
+                    return 1; // 1 slide en móviles
+                } else if (window.innerWidth <= 1024) {
+                    return 2; // 2 slides en tablets
+                } else {
+                    return 3; // 3 slides en pantallas grandes
+                }
+            }
+
+            let slidesToShow = updateSlidesToShow();
+            let slideWidth = track.clientWidth / slidesToShow;
+
+            function moveCarousel() {
+                const amountToMove = slideWidth * currentSlideIndex;
+                track.style.transform = `translateX(-${amountToMove}px)`;
+            }
+
+            function adjustCarousel() {
+                slidesToShow = updateSlidesToShow();
+                slideWidth = track.clientWidth / slidesToShow;
+
+                // Asegurarse de que el ancho de cada slide sea adecuado
+                slides.forEach(slide => {
+                    slide.style.width = `${slideWidth}px`;
+                });
+
+                // Si el índice actual está más allá de la cantidad de slides disponibles, ajustarlo
+                if (currentSlideIndex >= slides.length - slidesToShow) {
+                    currentSlideIndex = Math.max(slides.length - slidesToShow, 0);
+                }
+
+                moveCarousel();
+            }
 
             // Mover a la siguiente grupo de slides
             nextButton.addEventListener('click', () => {
-                const maxSlideIndex = slides.length - slidesToShow; // Máximo índice permitido
+                const maxSlideIndex = slides.length - slidesToShow;
                 if (currentSlideIndex >= maxSlideIndex) {
                     currentSlideIndex = 0; // Regresar al inicio
                 } else {
@@ -3519,17 +3543,19 @@
             // Mover al grupo anterior de slides
             prevButton.addEventListener('click', () => {
                 if (currentSlideIndex === 0) {
-                    currentSlideIndex = slides.length - slidesToShow; // Regresar al final
+                    currentSlideIndex = slides.length - slidesToShow;
                 } else {
                     currentSlideIndex = Math.max(currentSlideIndex - slidesToShow, 0);
                 }
                 moveCarousel();
             });
 
-            function moveCarousel() {
-                const amountToMove = slideWidth * currentSlideIndex;
-                track.style.transform = `translateX(-${amountToMove}px)`;
-            }
+            // Recalcular el número de slides y su ancho cuando la pantalla cambie de tamaño
+            window.addEventListener('resize', adjustCarousel);
+
+            // Ajustar el carrusel en la carga de la página
+            adjustCarousel();
+
         </script>
         <script src="wp-content/plugins/elementor/assets/js/frontend.min.js" id="elementor-frontend-js"></script>
         <script src="wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js" id="pro-elements-handlers-js"></script>

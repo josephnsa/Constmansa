@@ -1684,7 +1684,9 @@
                                                                     display: inline-block
                                                                 }
                                                             </style>
-                                                            <img width="932" height="259" src="wp-content/uploads/2023/04/CONSTMANSA-PNG.png" class="attachment-2048x2048 size-2048x2048 wp-image-96" alt="" srcset="wp-content/uploads/2023/04/CONSTMANSA-PNG.png 932w, wp-content/uploads/2023/04/CONSTMANSA.png 300w, wp-content/uploads/2023/04/CONSTMANSA-PNG-768x213.png 768w" sizes="(max-width: 932px) 100vw, 932px"/>
+                                                            <a href="inicio.html" class="ekit-menu-nav-link active">
+                                                                <img width="932" height="259" src="wp-content/uploads/2023/04/CONSTMANSA-PNG.png" class="attachment-2048x2048 size-2048x2048 wp-image-96" alt="" srcset="wp-content/uploads/2023/04/CONSTMANSA-PNG.png 932w, wp-content/uploads/2023/04/CONSTMANSA.png 300w, wp-content/uploads/2023/04/CONSTMANSA-PNG-768x213.png 768w" sizes="(max-width: 932px) 100vw, 932px"/>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1889,11 +1891,11 @@
                                                                                                                 <div class="elementor-widget-container">
                                                                                                                     <ul class="elementor-icon-list-items elementor-inline-items">
                                                                                                                         <li class="elementor-icon-list-item elementor-inline-item">
-                                                                                                                            <a href="mailto:gerencia@ecoinm.com" target="_blank">
+                                                                                                                            <a href="mailto:constmansa@outlook.com" target="_blank">
                                                                                                                                 <span class="elementor-icon-list-icon">
                                                                                                                                     <i aria-hidden="true" class="far fa-envelope"></i>
                                                                                                                                 </span>
-                                                                                                                                <span class="elementor-icon-list-text">gerencia@ecoinm.com</span>
+                                                                                                                                <span class="elementor-icon-list-text">constmansa@outlook.com</span>
                                                                                                                             </a>
                                                                                                                         </li>
                                                                                                                     </ul>
@@ -2209,7 +2211,7 @@
                                                                 <h3 class="elementor-icon-box-title">
                                                                     <span>Email					</span>
                                                                 </h3>
-                                                                <p class="elementor-icon-box-description">gerencia@ecoinm.com</p>
+                                                                <p class="elementor-icon-box-description">constmansa@outlook.com</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -3476,6 +3478,79 @@
             };
         </script>
         <script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js" id="elementskit-elementor-js"></script>
+       <!-- agregado -->
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3.1.0/dist/email.min.js"></script>
+       <script type="text/javascript">
+            (function(){
+                emailjs.init("SPWsqN38wib7kFaNK"); // Reemplaza TU_USER_ID por el User ID que obtuviste de EmailJS
+            })();
+        </script>
+        <script type="text/javascript">
+           document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('.elementor-form');
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            // Recupera el tiempo del último envío desde localStorage
+            const lastSubmitTime = localStorage.getItem('lastSubmitTime');
+            const now = new Date().getTime();
+            const BLOCK_DURATION = 2 * 60 * 1000; // 2 minutos en milisegundos
+
+            if (lastSubmitTime && now - lastSubmitTime < BLOCK_DURATION) {
+                const remainingTime = BLOCK_DURATION - (now - lastSubmitTime);
+                submitButton.disabled = true;
+                submitButton.innerText = `Enviado, Espere ${Math.ceil(remainingTime / 1000)} segundos.`;
+                setTimeout(() => {
+                    submitButton.disabled = false;
+                    submitButton.innerText = "Enviar Mensaje";
+                }, remainingTime);
+            }
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Detiene el envío del formulario por defecto
+
+                // Obtén los valores del formulario
+                const formData = {
+                    from_name: document.getElementById('form-field-name').value,
+                    from_email: document.getElementById('form-field-email').value,
+                    telefono: document.getElementById('form-field-field_98503ba').value,
+                    asunto: document.getElementById('form-field-field_5a95401').value,
+                    mensaje: document.getElementById('form-field-message').value
+                };
+
+                // Deshabilitar el botón de envío y cambiar el texto
+                submitButton.disabled = true;
+                submitButton.innerText = "Enviando";
+
+                // Envía el correo con EmailJS
+                emailjs.send("service_y7o8w6s", "template_jqp4mqb", formData)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert("Mensaje enviado con éxito");
+
+                    // Limpiar el formulario
+                    form.reset();
+
+                    // Guardar el tiempo del envío en localStorage
+                    localStorage.setItem('lastSubmitTime', now);
+
+                    // Bloquear el botón por 2 minutos
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        submitButton.innerText = "Enviar Mensaje";
+                    }, BLOCK_DURATION);
+
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert("Hubo un error al enviar el mensaje.");
+
+                    // Volver a habilitar el botón si falla
+                    submitButton.disabled = false;
+                    submitButton.innerText = "Enviar Mensaje";
+                    });
+                });
+            });
+        </script>
+          <!-- agregado -->
     </body>
 </html>
 <!-- Page generated by LiteSpeed Cache 5.2 on 2023-12-09 08:58:48 -->
